@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'SankofaDisplay-Regular';
+    src: url('Fonts/SankofaDisplay-Regular.ttf');
+}
+
+body{
+    display: flex;
+}
+.left{
+    flex-basis: 55%;
+    background-image: url(Images/background.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+#left-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    background-color: rgba(0, 0, 0, 0.649);
+    font-family: 'SankofaDisplay-Regular', sans-serif;
+    font-size: 100px;
+    color: white;
+}
+#left-text img{
+    width: 100px;
+}
+.right{
+    
+}
