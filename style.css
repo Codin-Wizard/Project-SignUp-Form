@@ -5,13 +5,19 @@
 
 body{
     display: flex;
+    min-height: 100vh;
+    margin: 0;
 }
-.left{
-    flex-basis: 55%;
+label, input{
+    display: block;
+}
+.left {
+    flex-basis: 40%;
     background-image: url(Images/background.jpg);
     background-size: cover;
-    height: 100vh;
+    height: 100vh; /* Set to 100% to follow the parent's height */
 }
+
 #left-text{
     display: flex;
     justify-content: center;
@@ -24,6 +30,26 @@ body{
 #left-text img{
     width: 100px;
 }
-.right{
-    
+.right {
+    justify-content: center;
+    flex-grow: 1; /* Allow .right to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensure .right spans full height of the parent */
+}
+.middle{
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.377);
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.form{
+}
+.topp{
+flex-grow: 1;
+}
+.bunn{
+flex-grow: 1;
+}
+.bunn, .topp{
+    background-color: #f9fafc;
 }
