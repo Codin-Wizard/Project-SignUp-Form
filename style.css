@@ -2,15 +2,41 @@
     font-family: 'SankofaDisplay-Regular';
     src: url('Fonts/SankofaDisplay-Regular.ttf');
 }
-
+p{
+    font-size: 20px;
+    font-weight: 600;
+}
 body{
     display: flex;
     min-height: 100vh;
     margin: 0;
-}
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
 label, input{
     display: block;
 }
+label{
+    font-size: 10px;
+    font-weight: 700;
+    color: rgb(35, 39, 42);
+}
+input{
+    border: 1px solid #E5E7EB;
+    height: 20px;
+}
+input:focus-visible, input:focus{
+    outline: 1px solid blue;
+}
+input[type='password']:invalid{
+    border-color: red;
+}
+input[type='password']:invalid:focus{
+    outline:0px red;
+}
+.inputs{
+    margin-bottom: 20px;
+}
+
 .left {
     flex-basis: 40%;
     background-image: url(Images/background.jpg);
@@ -36,20 +62,28 @@ label, input{
     display: flex;
     flex-direction: column;
     height: 100vh; /* Ensure .right spans full height of the parent */
+
 }
 .middle{
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.377);
-    flex-grow: 1;
-    margin-bottom: 20px;
+    z-index: 1;
 }
 .form{
 }
 .topp{
-flex-grow: 1;
+    flex-grow: 0.5;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding-bottom: 30px;
 }
 .bunn{
+    padding-top: 20px;
 flex-grow: 1;
 }
 .bunn, .topp{
     background-color: #f9fafc;
+}
+.bunn, .topp, .middle{
+padding-left: 30px;
 }
